@@ -1,5 +1,5 @@
 .home {
-	
+
 	#hero{
 		//height: 300px;
 		overflow: hidden;
@@ -89,7 +89,7 @@
 				}
 				#news_posts {
 					width: 100%;
-					
+
 					li {
 						float: none;
 						width: 100%;
@@ -97,7 +97,7 @@
 						color: $dark-blue;
 						list-style: square;
 
-						a { 
+						a {
 							color: $dark-blue;
 							font-size: 10pt;
 							display: block;
@@ -106,7 +106,7 @@
 				}
 			}
 
-			img { 
+			img {
 				margin: 0 auto 5px;
 				height: 125px;
 				width: 99.4%;
@@ -171,7 +171,7 @@
 }
 
 #home-footer {
-	width: 100%;	
+	width: 100%;
 	min-height: 300px;
 	position: relative;
 
@@ -203,8 +203,8 @@
 			display: block;
 			margin: 0 0 4px;
 		}
-		&.hello { 
-			a{			
+		&.hello {
+			a{
 				@include img('hello.png', 0 -48px);
 				width: 70px;
 				height: 40px;
@@ -218,7 +218,7 @@
 			}
 		}
 		&.who_we_are {
-			a{			
+			a{
 				@include img('who_we_are.png', 0 -51px);
 				width: 50px;
 				height: 50px;
@@ -232,7 +232,7 @@
 			}
 		}
 		&.intro {
-			a{			
+			a{
 				@include img('sprite2.png', 0 -51px);
 				width: 50px;
 				height: 50px;
@@ -283,11 +283,11 @@
 		margin: 0 0 7px 0;
 	}
 	p { margin: 0 0 10px 0; }
-	
+
 	div.active {
 		width: 100%;
 		padding-bottom: 50px;
-		
+
 		.right {
 			width: 100%;
 
@@ -305,3 +305,24 @@
 		}
 	}
 }
+
+#ad {
+	position: absolute;
+	width: 50%;
+	right: 0;
+	top: 40%;
+
+	h2 {
+		color: #fff;
+		font-size: 32pt;
+		margin: 0 0 5px 0;
+		background-color: $main-color;
+		font-family: 'Open Sans Condensed', sans-serif;
+		padding: 4px 7px 10px;
+		box-sizing: border-box;
+	}
+	p.small {
+		font-size: 20pt;
+	}
+}
+

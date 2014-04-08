@@ -959,6 +959,22 @@ h1#title {
         margin: 6px 15px 52px 0;
         float: left; }
 
+#ad {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 40%; }
+  #ad h2 {
+    color: #fff;
+    font-size: 32pt;
+    margin: 0 0 5px 0;
+    background-color: #a70805;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding: 4px 7px 10px;
+    box-sizing: border-box; }
+  #ad p.small {
+    font-size: 20pt; }
+
 #wrapper-single, #wrapper-page, #wrapper-blog {
   width: 100%;
   float: left;

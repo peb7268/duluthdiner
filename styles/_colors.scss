@@ -1,0 +1,38 @@
+$base-global-text-color: #333;
+
+$lightest-blue: #2ba4f8;
+$light-blue: #3789d8;
+//$dark-blue: #0c4a7f;
+$dark-blue: #002651;
+$darker-blue: #0769ad;
+
+$button-color: lighten($light-blue, 15%);
+$light-button: lighten($dark-blue, 20%);
+
+$green: #6bb130;
+
+$hero-left-top: #797979;
+$hero-left-bottom: #424242;
+$hero-4: #b61441;
+$hero-3: #ff5f2e;
+$hero-2: #2e8af1;
+$hero-1: #00ab02;
+$hero-aside: #6a4aa6;
+$tweet-blue: #00CCC9;
+$twitter-cta: #A1009E;
+
+$signup: #6bb130; //green
+//$signup: #f1783c; //orange
+//$signup: #fff200; 	//yellow
+
+//System Page
+//$one: #de5900; //orange
+//$two: #ab3900;
+
+$one: #98c286;
+$two: #72ac58;
+
+$three: $lightest-blue; 
+$four: lighten($dark-blue, 20%);
+
+$main-color: #a70805;

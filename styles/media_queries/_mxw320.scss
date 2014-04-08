@@ -1,0 +1,22 @@
+//mobile phone
+@media all and (max-width: 320px){
+	body, html {
+		width: 100%;
+		display: block;
+	}
+	#wrapper {
+		max-width: 98%;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+	#slider {
+		img.hidden, img {
+			display: block;
+			max-width: 100%;
+			width: 100%;
+			position: relative;
+			background: #FFF;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+//iPhone landscape
+@media all and (max-width: 480px){
+  body {}
+	#wrapper-single, #wrapper-page, #wrapper-blog {
+		#single-header {
+			.left {
+				width: 70%;
+			}
+			.right {
+				width: 30%;
+			}
+		}
+	}
+	
+	header {
+		div#logo {
+			position: relative;
+
+			h1 {
+				margin-bottom: 0;
+				font-size: 30pt;
+			}
+			p.tagline {
+				width: 299px;
+				position: absolute;
+				left: 0;
+				top: 71px;
+				margin: 0;
+				float: none;
+			}
+		}
+		#navigation {			
+			& > .menu { 
+					li{ 
+						& > a {
+						font-size: 22pt;
+					}
+				}
+			}
+		}
+	}
+	.page-template-blog-php {
+		#wrapper-blog {
+			#blog {
+				article {
+					margin: 0 auto 10px;
+				}
+				.post {
+					.img {
+						width: 100%;
+						float: none;
+						height: auto;
+						margin: 0 0 10px;
+					}
+					.content {
+						width: 100%;
+					}
+					h1 { 
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+	#wrapper-home {
+		
+		#home-footer > .right #intro_video {
+			max-height: 215px;
+		}
+	}
+	#content-tabs li a {
+		font-size: 12pt;
+	}
+	#forms .stamp {
+		display: none;
+	}
+}

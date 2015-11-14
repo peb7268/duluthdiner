@@ -1,0 +1,819 @@
+//WordPress Styles
+.alignright {
+	float: right;
+}
+.block {
+	position: relative;
+}
+body {
+	@include gradient(#fff, #ddd);
+	background: #ddd;
+	//background-image: none;
+	//border-top: 5px solid $dark-blue;
+	min-height: 550px;
+	font-size: 11pt;
+}
+a, a:visited {
+	color: $darker-blue;
+}
+header {
+	padding: 0;
+	margin: 0 0 5px 0;
+	position: relative;
+	z-index: 20;
+	height: 67px;
+	overflow: hidden;
+
+	#logo {
+		margin: 22px 7px 0 0;
+		width: auto;
+		max-width: 35%;
+		float: left;
+
+
+		h1 {
+			@include logo-font-headline(34pt, #000);
+			// @include diner-logo-font-headline(34pt, #000);
+			font-weight: bold;
+
+			span {
+				color: #0660b7;
+			}
+		}
+		.tagline {
+			font-size: 12px;
+			display: block;
+			width: 100%;
+			color: #000;
+			margin: -3px 0 0 1px;
+			line-height: 1;
+		}
+	}
+}
+#wrapper {
+	width: 100%;
+	max-width: 960px;
+	margin: 20px auto 7px;
+}
+#social{
+	display: none;
+	width: 20%;
+	position: absolute;
+	right: 1%;
+	top: 0%;
+
+	.content{
+		display: none;
+		background: $dark-blue;
+		height: 250px;
+		overflow: hidden;
+		position: relative;
+		z-index: 9999;
+
+		& > img {
+			border-top: 1px solid #003573;
+			padding: 10px 25px 10px 10px;
+		}
+
+		#search {
+			width: 75%;
+			position: relative;
+			border-bottom: 1px solid #000;
+			padding: 5px 35px 10px;
+			margin: 10px auto 0;
+
+			p {
+				width: 100%;
+
+				input {
+					padding: 7px 2%;
+					border: 1px solid #000;
+					font-size: 10pt;
+				}
+				#s {
+					width: 63%;
+				}
+				#submit {
+					color: #fff;
+					width: 27%;
+					background: $light-blue;
+
+					&:hover {
+						background: darken($light-blue, 10%);
+						cursor: pointer;
+					}
+				}
+			}
+		}
+		#social-sprite{
+			position: relative;
+			width: 89%;
+			margin: 0 auto;
+
+			li {
+				float: left;
+				margin-right: 15.66%;
+				overflow: hidden;
+				position: relative;
+
+				a {
+					color: #fff;
+					display: block;
+					height: 50px;
+					overflow: hidden;
+					//text-indent: -9999px;
+				}
+				&.twitter{
+					width: 55px;
+					a{
+						//@include img($img-path + 'social_sprite.png', 0);
+						//background-position: 0 0;
+					}
+				}
+				&.facebook {
+					width: 50px;
+					 a {
+						//@include img($img-path + 'social_sprite.png', 0);
+						//background-position: -54px 0;
+					}
+				}
+				&.gp{
+					margin-right: 0;
+					width: 50px;
+					a{
+						//@include img($img-path + 'social_sprite.png', 0);
+						//background-position: -76px 0;
+					}
+				}
+			}
+			li:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+	.trigger{
+		color: #fff;
+		@include img('social_sprite1.png', 16px 12px);
+		background-color: $dark-blue;
+		height: 40px;
+		display: block;
+		width: 150px;
+		font-weight: bold;
+		text-align: center;
+		float: right;
+		line-height: 2.5;
+		z-index: 1000;
+		position: relative;
+	}
+}
+#body, #blog, #sidebar {
+	padding: 23px 10px;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+}
+#sidebar {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding-top: 10px;
+	width: 25%;
+	min-height: 400px;
+	float: right;
+	background: #fff;
+	border-radius: 0 7px 7px 0;
+	@import 'elements/search';
+
+	#the-system-ctas {
+		a {
+			display: block;
+			@include logo-font-headline(21pt, #fff);
+			text-align: center;
+			padding: 20px 0;
+			text-transform: uppercase;
+			margin: 0 0 5px;
+
+			//Use the abstracted gradient
+			&#software-demo {
+				background-color: $one;
+				background-image: -webkit-gradient(linear, left top, left bottom, from($one), to($two));
+				background-image: -webkit-linear-gradient(top, $one, $two);
+				background-image: -moz-linear-gradient(top, $one, $two);
+				background-image: -o-linear-gradient(top, $one, $two);
+				background-image: -ms-linear-gradient(top, $one, $two);
+				background-image: linear-gradient(top, $one, $two);
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$one}', EndColorStr='#{$two}');
+				border: 1px solid darken($two, 30%);
+				border-top: 1px solid darken($one, 20%);
+				text-shadow: 0px 0px 1px darken($two, 70%);
+			}
+			&#free-dvd {
+				background-color: $three;
+				background-image: -webkit-gradient(linear, left top, left bottom, from($one), to($four));
+				background-image: -webkit-linear-gradient(top, $three, $four);
+				background-image: -moz-linear-gradient(top, $three, $four);
+				background-image: -o-linear-gradient(top, $three, $four);
+				background-image: -ms-linear-gradient(top, $three, $four);
+				background-image: linear-gradient(top, $three, $four);
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$three}', EndColorStr='#{$four}');
+				border: 1px solid darken($four, 30%);
+				border-top: 1px solid darken($three, 20%);
+				text-shadow: 0px 0px 1px darken($four, 70%);
+			}
+		}
+	}
+
+	#newsletter {
+		position: relative;
+		height: 100px;
+		width: 100%;
+		margin-bottom: 8px;
+		overflow: hidden;
+
+		#newsletter-signup, #mc {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#mc {
+			box-sizing: border-box;
+			padding: 10px 20px;
+			background-color: #ccc;
+			height: 100px;
+			width: 100%;
+			z-index: 1;
+			#success {
+				margin-top: 30px;
+				display: none;
+				color: green;
+			}
+			p {
+				font-size: 10pt;
+				margin: 6px 0 4px 0;
+				text-align: center;
+			}
+			input{
+				display: block;
+				border: 0;
+				width: 100%;
+				padding: 4px 7px;
+				box-sizing: border-box;
+				margin: 0 auto;
+			}
+			input[type="text"] {
+				background-color: #eee;
+				color: #555;
+				margin-bottom: 5px;
+			}
+			input#reset, input[type="submit"] {
+				&:hover{
+					cursor: pointer;
+				}
+			}
+			input#reset{
+				float: left;
+				width: 49%;
+				background-color: $dark-blue;
+				color: #fff;
+				margin-right: 2%;
+			}
+			input[type="submit"]{
+				float: left;
+				width: 49%;
+				background-color: $light-blue;
+				color: #fff;
+			}
+		}
+		#newsletter-signup {
+			z-index: 10;
+			display: block;
+			height: 100px;
+			width: 100%;
+			background-color: #999;
+			@include img('newsletter-signup.png', 0 0);
+			border: 1px solid #AAA;
+			border-right: 1px solid #999;
+			border-bottom: 1px solid #555;
+		}
+	}
+}
+#navigation-footer {
+	display: block;
+	margin: 0 auto 40px;
+	width: 50%;
+
+	li {
+		float: left;
+		margin: 0 2% 0 0;
+		a {
+			color: $light-blue;
+		}
+	}
+}
+#db_queries {
+	background: #fcd747;
+	color: $dark-blue;
+	//font-weight: bold;
+	margin: 20px auto;
+	width: 80%;
+	padding: 5%;
+	box-sizing: border-box;
+	overflow: auto;
+}
+#content-tabs {
+	display: block;
+	margin: 0 auto;
+
+	li{
+		float: left;
+		margin-right: 1px;
+		font-size: 9pt;
+		width: 32.8%;
+		overflow: hidden;
+
+		&.ue {
+			border-radius: 5px 0 0 0;
+		}
+		&.rn {
+			border-radius: 0 5px 0 0;
+		}
+		&:nth-child{
+			margin-right: 0;
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			border-box: box-sizing;
+			padding: 4px 2px 4px 6px;
+			color: #fff;
+			font-size: 11pt;
+			font-weight: bold;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		&.ue a{
+			background: $light-blue;
+			&:hover {
+				background: darken($light-blue, 15%);
+			}
+		}
+		&.nf a {
+			background: darken(desaturate($light-blue, 15%), 10%);
+			&:hover {
+				background: darken(desaturate($light-blue, 15%), 25%);
+			}
+		}
+		&.rn a {
+			background: $dark-blue;
+
+			&:hover {
+				background: darken($dark-blue, 15%);
+			}
+		}
+	}
+}
+#content-body {
+	width: 97.5%;
+	overflow: hidden;
+	border-radius: 0 0 5px 5px;
+	min-height: 150px;
+	background-color: #e6e6e6;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#cccccc));
+	background-image: -webkit-linear-gradient(top, #e6e6e6, #cccccc);
+	background-image: -moz-linear-gradient(top, #e6e6e6, #cccccc);
+	background-image: -o-linear-gradient(top, #e6e6e6, #cccccc);
+	background-image: -ms-linear-gradient(top, #e6e6e6, #cccccc);
+	background-image: linear-gradient(top, #e6e6e6, #cccccc);
+	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e6e6e6', EndColorStr='#cccccc');
+
+
+	li {
+		font-size: 10pt;
+		display: none;
+
+		&.active {
+			display: block;
+
+			&#ue {
+				margin-top: 0;
+			}
+		}
+
+		a {
+			display: block;
+			color: #333;
+			padding: 7px 2px 3px;
+			border-bottom: 1px solid #999;
+			border-top: 1px solid #fff;
+
+			&:first-child{
+				border-top: 0;
+			}
+			&:last-child{
+				border-bottom: 0;
+			}
+			&:hover {
+				cursor: pointer;
+				color: $light-blue;
+				background-color: #eee;
+			}
+		}
+	}
+}
+#facebook-activity {
+	height: 300px;
+	width: 100%;
+	overflow: hidden;
+	margin: 8px auto;
+}
+#wrapper #wrapper-page #address {
+		width: 30%;
+		float: left;
+		h4 {
+			font-size: 14pt;
+			font-weight: bold;
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	#forms {
+		position: relative;
+		width: 60%;
+		float: right;
+		@include img('postcard.jpg', 0 0);
+		p { margin: 0 auto !important; }
+		.stamp {
+				border: 1px solid #232323;
+				width:  50px;
+				height: 60px;
+				position: absolute;
+				right: 2%;
+				top: 2%;
+			}
+		div.wpcf7 {
+			margin: 0 auto;
+			padding: 0;
+			width: 100%;
+
+			form {
+				width: 70%;
+				margin: 90px auto 0;
+
+				input, textarea {
+					border: none;
+					border-bottom: 1px solid #232323;
+					padding: 0 0 2px 0;
+					background: transparent;
+					font-size: 10pt;
+					width: 100%;
+
+					&::-webkit-input-placeholder {
+						color: #555;
+					}
+				}
+
+				textarea {
+					height: 50px;
+					border-bottom: none;
+					overflow: auto;
+				}
+
+				select {
+					border: 1px solid #999;
+					background: #fff;
+				}
+
+				input[type="submit"]{
+					border: none;
+					color: $darker-blue;
+					text-align: left;
+
+					&:input {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+#form_wrapper, #wrapper-page {
+	width: 100%;
+	margin: 0 auto;
+
+	h4 {
+		color: $darker-blue;
+		font-weight: bold;
+	}
+
+	form#order_forms {
+		width: 100%;
+		#top {
+			border-bottom: 1px dotted #777;
+			padding: 0 0 15px;
+			.left {
+				width: 30%;
+				border-right: 1px dotted #777;
+			}
+			.middle {
+				width: 30%;
+				float: left;
+				border-right: 1px dotted #777;
+				padding-bottom: 24px;
+
+				h4 {
+					padding-left: 7px;
+					margin-bottom: 4px;
+				}
+
+				input[type="text"]{
+					width: 95%;
+					margin: 0 auto;
+					display: block;
+				}
+				label {
+					input {
+
+					}
+				}
+			}
+			.right {
+				width: 38%;
+			}
+		}
+		input {
+			box-sizing: border-box;
+			display: block;
+			border: 1px solid #ddd;
+			border-bottom: 1px solid #ccc;
+			font-size: 9pt;
+			width: 95%;
+		}
+		input[type="text"], input[type="email"], textarea {
+			padding: 4px 7px;
+		}
+		input[type="submit"]{
+			width: 40%;
+			padding: 7px;
+			background: $darker-blue;
+			color: #fff;
+			&:hover {
+				background: darken($darker-blue, 5%);
+				cursor: pointer;
+			}
+		}
+		label {
+			display: block;
+			font-size: 9pt;
+			width: 100%;
+			margin: 0 auto 4px;
+			line-height: 1.5;
+
+			input[type="checkbox"]{
+				width: 25px;
+				float: left;
+			}
+		}
+	}
+	.forms_tables, .sysreqs_tables {
+		margin: 20px auto;
+		width: 100%;
+		border-bottom: 1px solid desaturate(lighten($darker-blue, 40%), 70%);
+
+		tr {
+			td:nth-child(1){
+				width: 270px;
+			}
+			th.form_category {
+				color: $darker-blue;
+			}
+			td, th {
+				@include gradient(#fff, #eee);
+				padding: 7px 0 7px 6px;
+			}
+			&.even {
+
+				td {
+					background: desaturate(lighten($darker-blue, 55%), 70%);
+					border-bottom: 1px solid desaturate(lighten($darker-blue, 40%), 70%);
+					border-top: 1px solid desaturate(lighten($darker-blue, 40%), 70%);
+				}
+			}
+		}
+	}
+	.sysreqs_tables {
+		margin: 20px auto 50px;
+	}
+}
+#form_wrapper {
+	margin-top: 40px;
+}
+table {
+	th {
+		font-weight: bold;
+	}
+}
+.page-template-training-php #wrapper-page {
+	h4 {
+		color: #333;
+		margin: 20px 0 0px;
+	}
+}
+h1#title {
+	@include thin-font-headline(28pt, #333);
+	margin-bottom: 4px;
+}
+#contact-options {
+	overflow: hidden;
+	width: 100%;
+}
+#map {
+	overflow: hidden;
+	float: left;
+	margin: 0 5px 0 0;
+	width: 605px;
+}
+.right {
+	div.wpcf7 {
+		background: $main-color;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding: 10px 10px 2px;
+		input {
+			border: 1px solid darken($main-color, 15%);
+			padding: 4px;
+		}
+		p {
+			color: #fff;
+			font-weight: bold;
+		}
+		.wpcf7-submit {
+			background: darken($main-color, 15%);
+			color: #fff;
+			border: 1px solid darken($main-color, 15%);
+			font-size: 9pt;
+			text-transform: uppercase;
+			padding: 4px 10px;
+		}
+	}
+}
+//Catering Page
+.page-id-277 {
+	h2 {
+		margin: 15px 0 2px 0;
+		font-size: 17pt;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-family: 'helvetica', 'arial', sans-serif;
+		letter-spacing: -1px;
+	}
+	h4 {
+		margin: 5px 0 0 0;
+	}
+}
+//Contact Page
+.page-id-69 {
+	h2.headline {
+		background: $main-color;
+		@include logo-font-headline(28pt, #fff);
+		margin: 2px 0 10px 0;
+		padding: 5px 0 5px 5px;
+	}
+	#contact-bottom{
+		#contact-options{
+			float: left;
+			width: 48%;
+			border-right: 1px dotted #333;
+			margin: 0 2% 0 0;
+			padding: 0 0 70px 0;
+		}
+		.hours {
+			float: right;
+			width: 48%;
+		}
+		.social-block {
+			height: 50px;
+			margin: 0 0 7px 0;
+		}
+	}
+	table {
+		width: 100%;
+
+		tr {
+			th {
+				border: 1px solid darken(#feffd9, 50%);
+				border-left: 0;
+				border-right: 0;
+			}
+			td, th {
+				padding: 4px 7px;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			td {
+				background-color: #ebf1f8;
+				background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf1f8), to(#cad1d9));
+				background-image: -webkit-linear-gradient(top, #ebf1f8, #cad1d9);
+				background-image: -moz-linear-gradient(top, #ebf1f8, #cad1d9);
+				background-image: -o-linear-gradient(top, #ebf1f8, #cad1d9);
+				background-image: -ms-linear-gradient(top, #ebf1f8, #cad1d9);
+				background-image: linear-gradient(top, #ebf1f8, #cad1d9);
+				filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ebf1f8', EndColorStr='#cad1d9');
+			}
+			&.odd {
+				td, th {
+					background-color: #fffff3;
+					background-image: -webkit-gradient(linear, left top, left bottom, from(#fffff3), to(#feffd9));
+					background-image: -webkit-linear-gradient(top, #fffff3, #feffd9);
+					background-image: -moz-linear-gradient(top, #fffff3, #feffd9);
+					background-image: -o-linear-gradient(top, #fffff3, #feffd9);
+					background-image: -ms-linear-gradient(top, #fffff3, #feffd9);
+					background-image: linear-gradient(top, #fffff3, #feffd9);
+					filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fffff3', EndColorStr='#feffd9');
+				}
+			}
+		}
+	}
+}
+//about page
+.page-id-2{
+	h2 {
+		margin: 10px 0 2px 0;
+		font-size: 14pt;
+		background: #A70805;
+		color: #FFF;
+		padding: 4px 0 4px 4px;
+	}
+	.block {
+		ul {
+			position: absolute;
+			top: 100px;
+			left: 20px;
+
+			li {
+				margin: 0 2px 3px 0;
+				list-style: disc;
+			}
+		}
+		img {
+			background: #EEE;
+			padding: 7px;
+			margin: 8px 5px 0 0;
+			border: 1px solid #CCC;
+		}
+	}
+}
+
+#banner {
+	img {
+		width: 100%;
+		overflow: hidden;
+	}
+}
+#ourFood {
+	li{
+		float: left;
+		margin-right: 20px;
+		width: 20%;
+
+		a {
+			color: #323232;
+
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+	h2 {
+		@include logo-font-headline(17pt, #fff);
+		background: darken($main-color, 15%);
+		padding: 10px 5px 10px 5px;
+
+		span{
+			background: #fff;
+			color: $main-color;
+			font-size: 24pt;
+			padding: 0 8px 0 2px;
+			border-radius: 17px;
+			margin-right: 3px;
+			font-style: italic;
+		}
+	}
+}
+#location {
+	color: #FFF;
+	font-size: 24pt;
+	display: block;
+	padding: 0;
+	line-height: 1;
+	margin: 0;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.block > li {
+	list-style: disc;
+}

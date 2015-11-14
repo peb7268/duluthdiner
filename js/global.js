@@ -239,5 +239,5 @@
 	            break;
 	    }
 	}
-	getLocation();
+	
 }(jQuery));
